@@ -1,0 +1,13 @@
+{% extends 'basic_app/basic.html' %}
+
+{% block title_block %}List of Schools{% endblock %}
+
+{% block body_block %}
+       
+      
+      <ul class="list-group">
+    {% for school in school_list %}
+    <li class="list-group-item"><a href="{{school.id}}/">{{school.name}}</a></li>
+    {% endfor %}
+</ul>
+    {% endblock %}
